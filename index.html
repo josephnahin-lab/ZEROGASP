@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f6f8f2"><title>ZéroGaspil CI — Sauver des repas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar" id="sidebar">
+    <a class="brand" href="#home"><span class="brand-mark">Z</span><span><b>ZéroGaspil</b><small>CÔTE D’IVOIRE</small></span></a>
+    <div class="side-caption">ESPACE DE TRAVAIL</div>
+    <nav class="nav-list" aria-label="Navigation principale">
+      <button class="nav-item" data-page="visitor"><span class="nav-icon">⌂</span>Accueil & découverte</button>
+      <button class="nav-item" data-page="client"><span class="nav-icon">◉</span>Espace client</button>
+      <button class="nav-item" data-page="merchant"><span class="nav-icon">▦</span>Espace commerçant</button>
+      <button class="nav-item" data-page="agent"><span class="nav-icon">✦</span>Espace agent</button>
+      <button class="nav-item" data-page="admin"><span class="nav-icon">◈</span>Administration</button>
+      <button class="nav-item" data-page="info"><span class="nav-icon">ⓘ</span>Informations & aide</button>
+    </nav>
+    <div class="sidebar-bottom"><div class="sim-badge"><span class="pulse"></span>Mode simulation <span class="badge-light">ACTIF</span></div><p>Prototype de présentation<br>Les données restent sur cet appareil.</p><button class="text-button" id="resetBtn">Réinitialiser les données</button></div>
+  </aside>
+  <main class="main-area">
+    <header class="topbar"><button class="mobile-menu" id="menuBtn" aria-label="Ouvrir le menu">☰</button><div class="breadcrumb"><span>Plateforme</span><i>›</i><b id="pageTitle">Accueil</b></div><div class="top-actions"><span class="live-state"><span class="live-dot"></span>Synchronisé</span><button class="button small secondary" onclick="openNotifications()">♧ Alertes <span id="alertCount"></span></button><button class="button small secondary" id="profileTop" onclick="editProfile()" style="display:none">Mon profil</button><button class="button small secondary" id="loginTop" onclick="openLogin()">Se connecter</button><button class="button small" id="signupTop" onclick="openSignup()">S’inscrire</button><button class="button small secondary" id="switchTop" onclick="logoutToLanding()" style="display:none">Changer d’espace</button><button class="avatar" title="Profil de démonstration">ZG</button></div></header>
+    <div class="content" id="content"></div>
+  </main>
+</div>
+<div class="toast" id="toast" role="status"></div>
+<dialog id="modal" class="modal"><div class="modal-head"><div><span class="eyebrow" id="modalEyebrow">FORMULAIRE</span><h2 id="modalTitle"></h2></div><button class="icon-button" id="closeModal" aria-label="Fermer">×</button></div><div id="modalBody"></div></dialog>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="app.js"></script>
+</body></html>
